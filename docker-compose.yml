@@ -1,0 +1,11 @@
+version: "3"
+services:
+  currency:
+    build: ./
+    env_file:
+      - env_testnet.env
+    ports:
+      - "3002:3002"
+    volumes:
+      - "./log:/go/src/github.com/chaintex/currencies/log"
+    restart: always
